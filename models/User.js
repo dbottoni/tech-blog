@@ -13,24 +13,25 @@ class User extends Model {
 // create fields/columns for User model
 User.init(
   {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true
-    },
-    username: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    email: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true,
-      validate: {
-        isEmail: true
-      }
-    },
+    // Table Column Definitions go Here 13.1.5 
+    // id: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false,
+    //   primaryKey: true,
+    //   autoIncrement: true
+    // },
+    // username: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false
+    // },
+    // email: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    //   unique: true,
+    //   validate: {
+    //     isEmail: true
+    //   }
+    // },
     password: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -41,6 +42,7 @@ User.init(
   },
   {
     hooks: {
+       // TABLE CONFIGURATION OPTIONS GO HERE (https://sequelize.org/v5/manual/models-definition.html#configuration))
       // set up beforeCreate lifecycle "hook" functionality
       async beforeCreate(newUserData) {
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
