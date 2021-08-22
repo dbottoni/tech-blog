@@ -1,8 +1,10 @@
 const router = require('express').Router();
 const { Post, User, Comment } = require('../../models');
 
-// GET /api/users
-router.get('/', (req, res) => {});
+router.get('/', (req, res) => {
+
+
+});
 
 // GET /api/users/1
 router.get('/:id', (req, res) => {});
