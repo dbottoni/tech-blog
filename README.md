@@ -7,22 +7,29 @@
 - [Technology](#technology)
 
 ## Description
-
-
+An technical news blog application built to create, edit, delete, and comment on posts. Users can only post or comment when logged in.
 
 ## Installation
 
-Requires Node.js to run from the command line
+Test environment runs throguh Heroku
+Heroku Link;
+https://blooming-shelf-38989.herokuapp.com/
 
 ## Usage
 
-To maintain an e-commere database using back end technologies.
+To create and maintain an online blog posting forum
 
 ## Technology
 
+- Bcrypt
+- Connect-sequelize-session
+- Dotenv
 - Express
-- Handlebars
+- Express-handlebars
+- Express-session
 - JavaScript
 - Node.js
 - MySQL
+- Sequelize
+- CSS Imported from Module. Credit to Trilogy Education
 
